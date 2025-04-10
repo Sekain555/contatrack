@@ -7,6 +7,7 @@ import ForgotPassword from '../views/ForgotPassword.vue';
 import MainMenu from '../views/MainMenu.vue';
 import MainBusiness from '@/views/MainBusiness.vue';
 import BusinessProfile from '../views/BusinessProfile.vue';
+import Ledger from '../views/LedgerAccountBook.vue';
 
 const routes = [
   {
@@ -25,6 +26,7 @@ const routes = [
       { path: 'mainmenu', component: MainMenu },
       { path: 'mainbusiness', component: MainBusiness },
       { path: 'businessprofile/:slug', component: BusinessProfile, name: 'BusinessProfile' },
+      { path: 'ledger/:slug', component: Ledger, name: 'Ledger' },
     ]
   }
 ];

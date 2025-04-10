@@ -1,18 +1,20 @@
 <template>
-    <v-navigation-drawer color="sidebar" permanent>
+    <v-navigation-drawer color="sidebar" floating permanent>
         <v-list class="h-100 d-flex flex-column">
-            <v-list-item title="ContaTrack" class="text-center">
+            <v-list-item title="CONTRATACK" class="text-center">
                 <template #prepend>
-                    <v-img height="32" width="32" src="/src/assets/contabilidad.png"></v-img>
+                    <v-img class="mx-1" height="32" width="32" src="/src/assets/contabilidad.png"></v-img>
                 </template>
             </v-list-item>
             <v-divider></v-divider>
-            <v-list-subheader elevation:="15">DASHBOARD CONTABLE</v-list-subheader>
+            <v-list-subheader elevation:="15">GESTIÓN EMPRESAS</v-list-subheader>
             <v-list-item link to="/mainmenu" density="compact">
                 <template #prepend>
                     <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/mis-empresas-24px.png"></v-img>
                 </template>
-                Gestión Empresas</v-list-item>
+                Gestionar Empresas</v-list-item>
+            <v-divider></v-divider>
+            <v-list-subheader elevation:="15">LIBRO CONTABLE</v-list-subheader>
             <v-list-item link to="/mainbusiness" density="compact">
                 <template #prepend>
                     <v-img class="mr-3" height="24" width="24"

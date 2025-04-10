@@ -17,7 +17,7 @@
                             <v-card elevation="24">
                                 <v-container>
                                     <v-row justify="start">
-                                        <v-btn color="buttonprimary" icon variant="text"><v-icon>
+                                        <v-btn color="sidebar" icon variant="text"><v-icon>
                                                 {{ empresa.favorito ? 'mdi-star' : 'mdi-star-outline' }}
                                             </v-icon></v-btn>
                                     </v-row>
@@ -29,7 +29,7 @@
                                     <v-row justify="space-evenly">
                                         <v-dialog width="auto">
                                             <template v-slot:activator="{ props: activatorProps }">
-                                                <v-btn color="buttonprimary" icon="mdi-card-account-details"
+                                                <v-btn color="sidebar" icon="mdi-card-account-details"
                                                     variant="text" v-bind="activatorProps"></v-btn>
                                             </template>
                                             <template v-slot:default="{ isActive }">
@@ -58,7 +58,7 @@
                                                 </v-card>
                                             </template>
                                         </v-dialog>
-                                        <v-btn color="buttonprimary" icon="mdi-briefcase-edit" variant="text"  @click="irAlPerfilEmpresa(empresa)"></v-btn>
+                                        <v-btn color="sidebar" icon="mdi-briefcase-edit" variant="text"  @click="gotoLedger(empresa)"></v-btn>
                                     </v-row>
                                 </v-container>
                             </v-card>
@@ -204,7 +204,11 @@ export default {
         irAlPerfilEmpresa(empresa) {
             const slug = this.slugify(empresa.nombre);
             this.$router.push({ name: 'BusinessProfile', params: { slug } });
-        }
+        },
+        gotoLedger(empresa) {
+            const slug = this.slugify(empresa.nombre);
+            this.$router.push({ name: 'Ledger', params: { slug } });
+        },
     },
     computed: {
         girosOrdenados() {
