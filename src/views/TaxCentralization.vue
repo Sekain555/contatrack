@@ -1,4 +1,7 @@
 <template>
+    <v-main>
+        <router-view />
+    </v-main>
     <v-container>
         <v-row>
             <v-col>
@@ -15,3 +18,9 @@
         </v-row>
     </v-container>
 </template>
+
+<style scoped>
+.fill-height {
+    height: 100vh;
+}
+</style>

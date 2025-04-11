@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer color="sidebar" floating permanent>
+    <v-navigation-drawer color="sidebar" floating rail expand-on-hover>
         <v-list class="h-100 d-flex flex-column">
             <v-list-item title="CONTRATACK" class="text-center">
                 <template #prepend>
@@ -15,6 +15,16 @@
                 Gestionar Empresas</v-list-item>
             <v-divider></v-divider>
             <v-list-subheader elevation:="15">LIBRO CONTABLE</v-list-subheader>
+            <v-list-item link to="/taxcentralization/0" density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/centralizacion-impuestos-24px.png"></v-img>
+                </template>
+                Centralizacion de Impuestos</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Compras</v-list-item>
             <v-list-item link to="/mainbusiness" density="compact">
                 <template #prepend>
                     <v-img class="mr-3" height="24" width="24"
@@ -25,7 +35,47 @@
                 <template #prepend>
                     <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
                 </template>
-                Libro Contable</v-list-item>
+                Impuesto Específico Negativo</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Ingresos</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Notas de Crédito</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Pago de Impuestos</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/pago-impuestos-24px.png"></v-img>
+                </template>
+                Pago Honorarios</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Pago Imposiciones</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Otros Egresos</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Remuneraciones</v-list-item>
+            <v-list-item link density="compact">
+                <template #prepend>
+                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/libro-contable-24px.png"></v-img>
+                </template>
+                Ventas</v-list-item>
             <v-divider></v-divider>
             <v-list-subheader>FORMULARIOS</v-list-subheader>
             <v-list-item link density="compact">F22</v-list-item>

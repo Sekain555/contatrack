@@ -29,8 +29,8 @@
                                     <v-row justify="space-evenly">
                                         <v-dialog width="auto">
                                             <template v-slot:activator="{ props: activatorProps }">
-                                                <v-btn color="sidebar" icon="mdi-card-account-details"
-                                                    variant="text" v-bind="activatorProps"></v-btn>
+                                                <v-btn color="sidebar" icon="mdi-card-account-details" variant="text"
+                                                    v-bind="activatorProps"></v-btn>
                                             </template>
                                             <template v-slot:default="{ isActive }">
                                                 <v-card color="sidebar">
@@ -58,7 +58,8 @@
                                                 </v-card>
                                             </template>
                                         </v-dialog>
-                                        <v-btn color="sidebar" icon="mdi-briefcase-edit" variant="text"  @click="gotoLedger(empresa)"></v-btn>
+                                        <!-- <v-btn color="sidebar" icon="mdi-book-edit" variant="text"
+                                            @click="gotoLedger(empresa)"></v-btn> -->
                                     </v-row>
                                 </v-container>
                             </v-card>
