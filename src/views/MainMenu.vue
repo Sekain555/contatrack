@@ -14,7 +14,7 @@
                     <v-divider></v-divider>
                     <v-row align="start" justify="start" class="ma-2">
                         <v-col cols="4" v-for="(empresa, index) in empresas" :key="index">
-                            <v-card elevation="24">
+                            <v-card elevation="24" @click="gotoLedger(empresa)">
                                 <v-container>
                                     <v-row justify="start">
                                         <v-btn color="sidebar" icon variant="text"><v-icon>
@@ -58,8 +58,8 @@
                                                 </v-card>
                                             </template>
                                         </v-dialog>
-                                        <!-- <v-btn color="sidebar" icon="mdi-book-edit" variant="text"
-                                            @click="gotoLedger(empresa)"></v-btn> -->
+                                       <v-btn color="sidebar" icon="mdi-book-edit" variant="text"
+                                            @click="gotoLedger(empresa)"></v-btn>
                                     </v-row>
                                 </v-container>
                             </v-card>
@@ -208,7 +208,7 @@ export default {
         },
         gotoLedger(empresa) {
             const slug = this.slugify(empresa.nombre);
-            this.$router.push({ name: 'Ledger', params: { slug } });
+            this.$router.push({ name: 'MainBusiness', params: { slug } });
         },
     },
     computed: {

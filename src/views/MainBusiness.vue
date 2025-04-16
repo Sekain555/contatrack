@@ -1,5 +1,12 @@
 <template>
     <v-container>
+        <v-row no-gutters>
+            <v-col cols="12">
+                <v-main class="pa-0">
+                    <router-view />
+                </v-main>
+            </v-col>
+        </v-row>
         <v-row>
             <v-col cols="3">
                 <v-card color="card" elevation="12">
@@ -41,9 +48,7 @@
                             <span class="text-h4 text-primary ma-2" style="font-family: 'Space Grotesk'">Menú
                                 Contabilidad</span>
                         </v-row>
-
                         <v-divider></v-divider>
-
                     </v-container>
                 </v-card>
             </v-col>

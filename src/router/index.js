@@ -21,11 +21,17 @@ const routes = [
     ]
   },
   {
+    path: '/mainmenu', component: MainMenu,
+  },
+  {
     path: '/', // Ruta para el menú principal
     component: MainLayout,
     children: [
-      { path: 'mainmenu', component: MainMenu },
-      { path: 'mainbusiness', component: MainBusiness },
+      {
+        path: 'mainbusiness/:slug', component: MainBusiness, name: 'MainBusiness', children: [
+          {  path: '0', component: BusinessCardLayout },
+        ]
+      },
       { path: 'businessprofile/:slug', component: BusinessProfile, name: 'BusinessProfile' },
       {
         path: 'taxcentralization', component: TaxCentralization, children: [

@@ -7,13 +7,6 @@
                 </template>
             </v-list-item>
             <v-divider></v-divider>
-            <v-list-subheader elevation:="15">GESTIÓN EMPRESAS</v-list-subheader>
-            <v-list-item link to="/mainmenu" density="compact">
-                <template #prepend>
-                    <v-img class="mr-3" height="24" width="24" src="/src/assets/icons/mis-empresas-24px.png"></v-img>
-                </template>
-                Gestionar Empresas</v-list-item>
-            <v-divider></v-divider>
             <v-list-subheader elevation:="15">LIBRO CONTABLE</v-list-subheader>
             <v-list-item link to="/taxcentralization/0" density="compact">
                 <template #prepend>
