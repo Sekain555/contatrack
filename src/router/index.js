@@ -28,8 +28,8 @@ const routes = [
     component: MainLayout,
     children: [
       {
-        path: 'mainbusiness/:slug', component: MainBusiness, name: 'MainBusiness', children: [
-          {  path: '0', component: BusinessCardLayout },
+        path: 'mainbusiness/:slug', component: MainBusiness, children: [
+          {  path: '0', component: BusinessCardLayout, name: 'MainBusiness' },
         ]
       },
       { path: 'businessprofile/:slug', component: BusinessProfile, name: 'BusinessProfile' },
