@@ -7,7 +7,7 @@
         </v-row>
         <v-row>
             <v-col>
-                <v-card color="card" elevation="12">
+                <v-card color="card" elevation="9">
                     <v-container>
                         <v-row align="center" justify="center" class="mb-1">
                             <span class="text-h4 text-primary ma-2" style="font-family: 'Space Grotesk'">Menú
