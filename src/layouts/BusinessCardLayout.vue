@@ -70,35 +70,48 @@
 </template>
 
 <script>
+import axios from 'axios';
+import { obtenerToken } from '../utils/obtenerToken';
+
 export default {
     data() {
         return {
-            // Simulamos unos giros de ejemplo
-            giros: [
-                { codigo: '11106', actividad: 'Cultivo de Porotos' },
-                { codigo: '11105', actividad: 'Cultivo de Otros Cereales' },
-                { codigo: '12200', actividad: 'Cultivo de Hortalizas' },
-                { codigo: '14110', actividad: 'Fabricación de Productos de Panadería' },
-                { codigo: '20300', actividad: 'Elaboración de Productos Lácteos' },
-            ],
+            datosBasicos: null,
             tooltip: false,
         };
     },
+    async created() {
+        const id = this.$route.params.id;
+        await this.cargarDatosBasicosEmpresa(id);
+    },
     computed: {
         visibles() {
-            return this.giros.slice(0, 1);
+            return this.datosBasicos?.giros.slice(0, 1) || [];
         },
         extras() {
-            return this.giros.slice(1);
+            return this.datosBasicos?.giros.slice(1) || [];
         },
     },
-};
+    methods: {
+        async cargarDatosBasicosEmpresa(id) {
+            try {
+                const token = await obtenerToken();
+                const { data } = await axios.get(
+                    `http://localhost:3000/api/empresas/datos-basicos/${id}`,
+                    { headers: { Authorization: `Bearer ${token}` } }
+                );
+                this.datosBasicos = data.datosBasicos;
+            } catch (error) {
+                console.error("Error al cargar datos básicos:", error);
+            }
+        },
+    },
+}
 </script>
 
 <style scoped>
-/* Ajustes opcionales para que los chips encajen mejor */
 .v-chip {
-  font-size: 0.75rem;
-  font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-family: 'Inter', sans-serif;
 }
 </style>
